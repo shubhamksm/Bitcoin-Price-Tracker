@@ -24,6 +24,40 @@ exports[`Checks App Snapshot 1`] = `
         37,138.2632
       </h1>
     </div>
+    <div
+      class="CurrencySelector"
+    >
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby="currency-select currency-select"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="currency-select"
+          role="button"
+          tabindex="0"
+        >
+          USD
+        </div>
+        <input
+          aria-hidden="true"
+          class="MuiSelect-nativeInput"
+          tabindex="-1"
+          value="USD"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
 </div>
 `;
