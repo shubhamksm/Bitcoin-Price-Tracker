@@ -1,0 +1,10 @@
+.CurrencySelector {
+  width: 100%;
+  font-weight: 500;
+  font-size: 24px;
+  color: #eeeeee;
+}
+
+.CurrencySelector label {
+  margin-bottom: 10px;
+}

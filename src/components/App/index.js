@@ -1,61 +1,49 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Header from '../Header';
 import PriceDislay from '../PriceDisplay';
 import CurrencySelector from '../CurrencySelector';
 
 function App() {
 
-  const sampleData = {
-    "USD": {
-        "code": "USD",
-        "symbol": "&#36;",
-        "rate": "37,138.2632",
-        "description": "United States Dollar",
-        "rate_float": 37138.2632
-    },
-    "GBP": {
-        "code": "GBP",
-        "symbol": "&pound;",
-        "rate": "27,341.7093",
-        "description": "British Pound Sterling",
-        "rate_float": 27341.7093
-    },
-    "EUR": {
-        "code": "EUR",
-        "symbol": "&euro;",
-        "rate": "30,744.8740",
-        "description": "Euro",
-        "rate_float": 30744.874
-    }
-  }
-
-  const sampleCurrencyCodes = ["USD", "GBP", "EUR"];
-
-  const [ selectedCurrency, setCurrency ] = useState({
-    code: '',
-    rate: ''
-  });
+  const [ data, setData ] = useState({});
+  const [ currencyCodes, setCurrencyCodes ] = useState([]);
+  const [ selectedCurrency, setCurrency ] = useState({});
 
   const updateCurrency = code => {
-    // TODO : Change with actual Data
-    setCurrency({ ...sampleData[code] });
+    setCurrency({ ...data[code] });
   }
 
-  // Temporary Use Effect to mock stub data
+  const getData = async () => {
+    const response = await axios({ 
+      method: 'get',
+      url: 'https://api.coindesk.com/v1/bpi/currentprice.json'
+    });
+    setData({ ...response.data.bpi });
+    setCurrencyCodes([ ...Object.keys(response.data.bpi) ]);
+  }
+
   useEffect(() => {
-    setCurrency({ ...sampleData["USD"] });
-  }, [])
+    getData();
+  }, []);
+
+  // Default Value
+  useEffect(() => {
+    setCurrency({ ...data[currencyCodes[0]] });
+  }, [currencyCodes])
 
   return (
     <div className="App">
       <Header />
-      <PriceDislay currencyCode={selectedCurrency.code} rate={selectedCurrency.rate} />
-      <CurrencySelector 
-        updateCurrency={updateCurrency} 
-        selectedCurrency={selectedCurrency} 
-        currencyCodes={sampleCurrencyCodes} 
-      />
+      {selectedCurrency && <>
+        <PriceDislay currencyCode={selectedCurrency.code} rate={selectedCurrency.rate} />
+        <CurrencySelector 
+          updateCurrency={updateCurrency} 
+          selectedCurrency={selectedCurrency} 
+          currencyCodes={currencyCodes} 
+        />
+      </>}
     </div>
   );
 }
