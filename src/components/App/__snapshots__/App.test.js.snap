@@ -13,7 +13,7 @@ exports[`Checks App Snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="PriceDislay"
+      class="PriceDisplay"
     >
       <h1>
         Price
