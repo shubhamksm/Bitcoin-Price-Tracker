@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checks App Snapshot 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="Header"
+    >
+      <svg>
+        bitcoin.svg
+      </svg>
+    </div>
+  </div>
+</div>
+`;
