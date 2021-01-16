@@ -12,6 +12,18 @@ exports[`Checks App Snapshot 1`] = `
         bitcoin.svg
       </svg>
     </div>
+    <div
+      class="PriceDislay"
+    >
+      <h1>
+        Price
+      </h1>
+      <h1>
+        $
+         
+        37,138.2632
+      </h1>
+    </div>
   </div>
 </div>
 `;
