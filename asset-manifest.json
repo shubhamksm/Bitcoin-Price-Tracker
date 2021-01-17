@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/bitcoin_tracker/static/css/main.9d830359.chunk.css",
+    "main.js": "/bitcoin_tracker/static/js/main.4aec8f96.chunk.js",
+    "main.js.map": "/bitcoin_tracker/static/js/main.4aec8f96.chunk.js.map",
+    "runtime-main.js": "/bitcoin_tracker/static/js/runtime-main.bf8b90ec.js",
+    "runtime-main.js.map": "/bitcoin_tracker/static/js/runtime-main.bf8b90ec.js.map",
+    "static/js/2.e12e0fb5.chunk.js": "/bitcoin_tracker/static/js/2.e12e0fb5.chunk.js",
+    "static/js/2.e12e0fb5.chunk.js.map": "/bitcoin_tracker/static/js/2.e12e0fb5.chunk.js.map",
+    "index.html": "/bitcoin_tracker/index.html",
+    "static/css/main.9d830359.chunk.css.map": "/bitcoin_tracker/static/css/main.9d830359.chunk.css.map",
+    "static/js/2.e12e0fb5.chunk.js.LICENSE.txt": "/bitcoin_tracker/static/js/2.e12e0fb5.chunk.js.LICENSE.txt",
+    "static/media/bitcoin.c791f288.svg": "/bitcoin_tracker/static/media/bitcoin.c791f288.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf8b90ec.js",
+    "static/js/2.e12e0fb5.chunk.js",
+    "static/css/main.9d830359.chunk.css",
+    "static/js/main.4aec8f96.chunk.js"
+  ]
+}
